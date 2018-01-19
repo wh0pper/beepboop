@@ -10,7 +10,20 @@ epicodus wk 3 code review - page that manipulates input number and displays resu
 This website was created for the code review in week 2 of the Epicodus web development program. It consists of two brief surveys that determine what languages someone should learn and what resources they should use based on their interests and their goals.
 
 ## Specifications
-*
+* Program takes a number and returns a range of numbers from 0 to the input number
+  * Example Input: 7
+  * Example Output: [0, 1, 2, 3, 4, 5, 6, 7]
+* If number is divisible by 3 program returns an error message.
+  * Example Input: 9
+  * Example Output: "I'm sorry, Dave. I'm afraid I can't do that."  
+* Program replaces numbers containing 1 and which aren't divisible by 3 with "Boop!"
+  * Example Input: 10
+  * Example Output: "Boop!"
+* Program replaces numbers containing 0 that don't contain 1 and aren't divisible by 3 with "Beep!"
+  * Example Input: 20
+  * Example Output: "Beep!"
+
+
 
 ## Setup/Installation Requirements
 
