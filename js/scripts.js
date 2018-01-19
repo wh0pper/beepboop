@@ -6,15 +6,17 @@ $(document).ready(function() {
 
     //add text w/o fade if numbers, beep, or boop
     if (!(/sorry/.test(outputStr))) {
+      $(".formSection > h2").text("Computer's Output:");
       $(".hal").html("");
       $(".convoElement").hide();
       $("#output").text(outputStr);
     } else { //if divisible by three, add HAL effects and conversation
+      $(".formSection > h2").text("");
       $(".hal").html("<img src='img/hal.png'>");
-      $("#output").text(outputStr);
+      $("#output").html("<h3>" + outputStr + "</h3>");
       $(".convoElement").hide();
       $("#convo1").fadeIn(1000);
-      $("#button1").show();
+      $("#button1, #nvmButton1").show();
     }
   });
 
@@ -23,7 +25,15 @@ $(document).ready(function() {
     $(".convoElement#convo1").hide();
     $("#convo2").fadeIn(1000, function() {
           $("#button2").fadeIn();
+          $("#nvmButton2").fadeIn();
     })
+  });
+
+  $(".nvmButton").click(function(event) {
+    console.log("nevermind");
+    $(".hal").html("");
+    $(".convoElement").hide();
+    $("#output").text("");
   });
 
   $("#button2").click(function(event) {
@@ -31,6 +41,7 @@ $(document).ready(function() {
     $(".convoElement#convo2").hide();
     $("#convo3").fadeIn(1000, function() {
           $("#button3").fadeIn();
+          $("#nvmButton3").fadeIn();
     })
   });
 
@@ -38,7 +49,7 @@ $(document).ready(function() {
     $("#output").text("");
     $(".convoElement#convo3").hide();
     $("#convo4").fadeIn(1000, function() {
-          $("#button4").fadeIn();
+          $("#button4 #nvmButton4").fadeIn();
     })
   });
 
@@ -46,7 +57,7 @@ $(document).ready(function() {
     $("#output").text("");
     $(".convoElement#convo4").hide();
     $("#convo5").fadeIn(1000, function() {
-          $("#button5").fadeIn();
+          $("#button5, #nvmButton5").fadeIn();
     })
   });
 
@@ -54,7 +65,7 @@ $(document).ready(function() {
     $("#output").text("");
     $(".convoElement#convo5").hide();
     $("#convo6").fadeIn(1000, function() {
-          $("#button6").fadeIn();
+          $("#button6, nvmButton6").fadeIn();
     })
   });
 

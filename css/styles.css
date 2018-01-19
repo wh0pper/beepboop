@@ -1,8 +1,11 @@
 body {
   background-color: black;
-  color: gray;
+  color: lightgray;
 }
 
+input {
+  color: black;
+}
 .convoElement {
   display: none;
 }
@@ -22,7 +25,6 @@ span {
 
 #output {
   margin: 0 auto;
-  color: white;
 }
 
 .hal {
@@ -36,6 +38,6 @@ span {
 .hal img {
   width: 100%;
   transform:
-    translateX(calc(var(--posx) * .1px))
-    translateY(calc(var(--posy) * .1px));
+    translateX(calc(var(--posx) * .2px))
+    translateY(calc(var(--posy) * .2px));
 }
