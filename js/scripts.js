@@ -2,7 +2,9 @@ $(document).ready(function() {
   $("#formInput").submit(function(event) {
     event.preventDefault();
     var inputStr = $("#numberInput").val();
-    var outputStr
+    var outputStr = produceOutput(inputStr);
+    console.log(outputStr);
+    $("#output").text(outputStr);
   });
 
 
@@ -42,7 +44,7 @@ var produceOutput = function(numStr) {
     for (var i = 0; i <= num; i++) {
       outputArr[i] = i;
     }
-    var outputStr = outputArr.join("");
+    var outputStr = outputArr.join(", ");
     return outputStr;
   }
 }
