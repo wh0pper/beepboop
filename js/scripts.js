@@ -3,21 +3,83 @@ $(document).ready(function() {
     event.preventDefault();
     var inputStr = $("#numberInput").val();
     var outputStr = produceOutput(inputStr);
-    console.log(outputStr);
-    $("#output").text(outputStr);
-    if (/sorry/.test(outputStr)) {
-      $("#convo1").toggle();
+
+    //add text w/o fade if numbers, beep, or boop
+    if (!(/sorry/.test(outputStr))) {
+      $(".hal").html("");
+      $(".convoElement").hide();
+      $("#output").text(outputStr);
+    } else { //if divisible by three, add HAL effects and conversation
+      $(".hal").html("<img src='img/hal.png'>");
+      $("#output").text(outputStr);
+      $(".convoElement").hide();
+      $("#convo1").fadeIn(1000);
+      $("#button1").show();
     }
   });
 
+  $("#button1").click(function(event) {
+    $("#output").text("");
+    $(".convoElement#convo1").hide();
+    $("#convo2").fadeIn(1000, function() {
+          $("#button2").fadeIn();
+    })
+  });
+
+  $("#button2").click(function(event) {
+    $("#output").text("");
+    $(".convoElement#convo2").hide();
+    $("#convo3").fadeIn(1000, function() {
+          $("#button3").fadeIn();
+    })
+  });
+
+  $("#button3").click(function(event) {
+    $("#output").text("");
+    $(".convoElement#convo3").hide();
+    $("#convo4").fadeIn(1000, function() {
+          $("#button4").fadeIn();
+    })
+  });
+
+  $("#button4").click(function(event) {
+    $("#output").text("");
+    $(".convoElement#convo4").hide();
+    $("#convo5").fadeIn(1000, function() {
+          $("#button5").fadeIn();
+    })
+  });
+
+  $("#button5").click(function(event) {
+    $("#output").text("");
+    $(".convoElement#convo5").hide();
+    $("#convo6").fadeIn(1000, function() {
+          $("#button6").fadeIn();
+    })
+  });
+
+  $("#button6").click(function(event) {
+    $("#output").text("");
+    $(".convoElement#convo6").hide();
+    $("#convo7").fadeIn(3000, function() {
+      $("body").html("");
+    })
+  });
+
+
+
+
+//pass mouse position as variables accessible in CSS
+  document.addEventListener('mousemove', function(event) {
+    var posx = event.pageX - $(window).width()/2;
+    var posy = event.pageY - $(window).height()/2;
+    document.documentElement.style.setProperty('--posx', posx);
+    document.documentElement.style.setProperty('--posy', posy);
+  })
+
 });
 
-document.addEventListener('mousemove', function(event) {
-  var posx = event.pageX - $(window).width()/2;
-  var posy = event.pageY - $(window).height()/2;
-  document.documentElement.style.setProperty('--posx', posx);
-  document.documentElement.style.setProperty('--posy', posy);
-})
+
 
 
 

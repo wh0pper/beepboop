@@ -11,9 +11,12 @@ span {
   display: none;
 }
 
+.convoElement>button {
+  display: none;
+}
+
 .outputSection {
   padding: 30px;
-  /*border: 1px solid green;*/
   height: auto;
 }
 
@@ -26,7 +29,8 @@ span {
   width: 150px;
   height: 150px;
   margin: 0 auto;
-
+  position: relative;
+  z-index: -1;
 }
 
 .hal img {
@@ -34,6 +38,4 @@ span {
   transform:
     translateX(calc(var(--posx) * .1px))
     translateY(calc(var(--posy) * .1px));
-
-  /*position: absolute;*/
 }
