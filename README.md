@@ -1,4 +1,4 @@
-# beepboop
+# Hal 9000
 epicodus wk 3 code review - page that manipulates input number and displays results
 
 #### Online Survey to exhibit use of HTML forms, Javascript and jQuery. Built for Epicodus week 2 code review
