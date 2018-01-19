@@ -9,7 +9,15 @@ $(document).ready(function() {
 
 
 
+
 });
+
+$(document).mousemove(function(event) {
+  var animate = document.documentElement.style;
+  animate.setProperty('mouse-x', event.clientX);
+  animate.setProperty('mouse-y', event.clientY);
+});
+
 
 //function to determine if input is divisible by 3
 var divisibleThree = function(numStr) {

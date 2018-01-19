@@ -6,3 +6,16 @@ body {
 .convo {
   display: none;
 }
+
+.hal {
+  width: 150px;
+  height: 150px;
+  transform: translate(50px, 100px);
+    /*translateX(calc(var(mouse-x)))
+    translateY(calc(var(mouse-y)));*/
+}
+
+.hal img {
+  width: 100%;
+  /*position: absolute;*/
+}
