@@ -20,59 +20,20 @@ $(document).ready(function() {
     }
   });
 
-  $("#button1").click(function(event) {
-    $("#output").text("");
-    $(".convoElement#convo1").hide();
-    $("#convo2").fadeIn(1000, function() {
-          $("#button2").fadeIn();
-          $("#nvmButton2").fadeIn();
-    })
-  });
-
   $(".nvmButton").click(function(event) {
-    console.log("nevermind");
     location.reload();
   });
 
-  $("#button2").click(function(event) {
+  $(".contButton").click(function(event) {
     $("#output").text("");
-    $(".convoElement#convo2").hide();
-    $("#convo3").fadeIn(1000, function() {
-          $("#button3").fadeIn();
-          $("#nvmButton3").fadeIn();
-    })
+    $(this).parent().hide();
+    $(this).parent().next().fadeIn(1000, function() {
+      $(this).children().fadeIn(1000);
+    });
   });
 
-  $("#button3").click(function(event) {
-    $("#output").text("");
-    $(".convoElement#convo3").hide();
-    $("#convo4").fadeIn(1000, function() {
-          $("#button4, #nvmButton4").fadeIn();
-    })
-  });
-
-  $("#button4").click(function(event) {
-    $("#output").text("");
-    $(".convoElement#convo4").hide();
-    $("#convo5").fadeIn(1000, function() {
-          $("#button5, #nvmButton5").fadeIn();
-    })
-  });
-
-  $("#button5").click(function(event) {
-    $("#output").text("");
-    $(".convoElement#convo5").hide();
-    $("#convo6").fadeIn(1000, function() {
-          $("#button6, #nvmButton6").fadeIn();
-    })
-  });
-
-  $("#button6").click(function(event) {
-    $("#output").text("");
-    $(".convoElement#convo6").hide();
-    $("#convo7").fadeIn(3000, function() {
-      $("body").html("");
-    })
+  $("#button7").click(function(event) {
+    $("body").text("");
   });
 
 //pass mouse position as variables accessible in CSS
