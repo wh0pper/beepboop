@@ -11,7 +11,7 @@ $(document).ready(function() {
       $(".convoElement").hide();
       $("#output").text(outputStr);
     } else { //if divisible by three, add HAL effects and conversation
-      $(".formSection > h2").text("");
+      $(".formSection").hide();
       $(".hal").html("<img src='img/hal.png'>");
       $("#output").html("<h3>" + outputStr + "</h3>");
       $(".convoElement").hide();
@@ -31,9 +31,7 @@ $(document).ready(function() {
 
   $(".nvmButton").click(function(event) {
     console.log("nevermind");
-    $(".hal").html("");
-    $(".convoElement").hide();
-    $("#output").text("");
+    location.reload();
   });
 
   $("#button2").click(function(event) {
@@ -49,7 +47,7 @@ $(document).ready(function() {
     $("#output").text("");
     $(".convoElement#convo3").hide();
     $("#convo4").fadeIn(1000, function() {
-          $("#button4 #nvmButton4").fadeIn();
+          $("#button4, #nvmButton4").fadeIn();
     })
   });
 
@@ -65,7 +63,7 @@ $(document).ready(function() {
     $("#output").text("");
     $(".convoElement#convo5").hide();
     $("#convo6").fadeIn(1000, function() {
-          $("#button6, nvmButton6").fadeIn();
+          $("#button6, #nvmButton6").fadeIn();
     })
   });
 
@@ -77,9 +75,6 @@ $(document).ready(function() {
     })
   });
 
-
-
-
 //pass mouse position as variables accessible in CSS
   document.addEventListener('mousemove', function(event) {
     var posx = event.pageX - $(window).width()/2;
@@ -87,12 +82,7 @@ $(document).ready(function() {
     document.documentElement.style.setProperty('--posx', posx);
     document.documentElement.style.setProperty('--posy', posy);
   })
-
 });
-
-
-
-
 
 //function to determine if input is divisible by 3
 var divisibleThree = function(numStr) {
