@@ -1,33 +1,29 @@
-# Hal 9000
+# Hal 18000
 epicodus wk 3 code review - page that manipulates input number and displays results
-
-#### Online Survey to exhibit use of HTML forms, Javascript and jQuery. Built for Epicodus week 2 code review
 
 #### By Jared Clemmensen
 
 ## Description
 
-This website was created for the code review in week 2 of the Epicodus web development program. It consists of two brief surveys that determine what languages someone should learn and what resources they should use based on their interests and their goals.
+This website was created for the code review in week 3 of the Epicodus web development program. It takes a user input number and displays different results based on certain conditions being met. Some of the outputs and styling take inspiration from the HAL 9000 computer in 2001: A Space Odyssey.
 
 ## Specifications
 * Program takes a number and returns a range of numbers from 0 to the input number
   * Example Input: 7
   * Example Output: [0, 1, 2, 3, 4, 5, 6, 7]
-* If number is divisible by 3 program returns an error message.
+* If number is divisible by 3 program malfunctions.
   * Example Input: 9
   * Example Output: "I'm sorry, Dave. I'm afraid I can't do that."  
 * Program replaces numbers containing 1 and which aren't divisible by 3 with "Boop!"
   * Example Input: 10
   * Example Output: "Boop!"
 * Program replaces numbers containing 0 that don't contain 1 and aren't divisible by 3 with "Beep!"
-  * Example Input: 20
+  * Example Input: 20 or 02
   * Example Output: "Beep!"
-
-
 
 ## Setup/Installation Requirements
 
-* access this site <a href="wh0pper.github.io/trackselector">here</a>
+* access this site <a href="wh0pper.github.io/hal18000">here</a>
 
 
 ## Support and contact details
@@ -36,7 +32,7 @@ contact the author at jaredclemmensen@gmail.com
 
 ## Technologies Used
 
-This site is built using HTML and CSS, with the Bootstrap framework for styling. jQuery is used to build the interface functionality and javascript is used for the logic that determines survey results.
+This site is built using HTML and CSS, with the Bootstrap framework for styling. jQuery is used to build the interface functionality and javascript is used for the logic that determines page outputs.
 
 ### License
 
