@@ -5,18 +5,20 @@ $(document).ready(function() {
     var outputStr = produceOutput(inputStr);
     console.log(outputStr);
     $("#output").text(outputStr);
+    if (/sorry/.test(outputStr)) {
+      $("#convo1").toggle();
+    }
   });
 
-
-
-
 });
 
-$(document).mousemove(function(event) {
-  var animate = document.documentElement.style;
-  animate.setProperty('mouse-x', event.clientX);
-  animate.setProperty('mouse-y', event.clientY);
-});
+document.addEventListener('mousemove', function(event) {
+  var posx = event.pageX - $(window).width()/2;
+  var posy = event.pageY - $(window).height()/2;
+  document.documentElement.style.setProperty('--posx', posx);
+  document.documentElement.style.setProperty('--posy', posy);
+})
+
 
 
 //function to determine if input is divisible by 3

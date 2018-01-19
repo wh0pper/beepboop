@@ -3,19 +3,37 @@ body {
   color: gray;
 }
 
-.convo {
+.convoElement {
   display: none;
+}
+
+span {
+  display: none;
+}
+
+.outputSection {
+  padding: 30px;
+  /*border: 1px solid green;*/
+  height: auto;
+}
+
+#output {
+  margin: 0 auto;
+  color: white;
 }
 
 .hal {
   width: 150px;
   height: 150px;
-  transform: translate(50px, 100px);
-    /*translateX(calc(var(mouse-x)))
-    translateY(calc(var(mouse-y)));*/
+  margin: 0 auto;
+
 }
 
 .hal img {
   width: 100%;
+  transform:
+    translateX(calc(var(--posx) * .1px))
+    translateY(calc(var(--posy) * .1px));
+
   /*position: absolute;*/
 }
