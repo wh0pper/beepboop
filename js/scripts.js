@@ -5,14 +5,16 @@ $(document).ready(function() {
     var outputStr = produceOutput(inputStr);
 
     //add text w/o fade if numbers, beep, or boop
-    if (!(/sorry/.test(outputStr))) {
+    if (!(/sorry|B/.test(outputStr))) {
       $(".hal").html("");
       $(".convoElement").hide();
       $("#output").html("<h4>All numbers up to your input: </h4>" + outputStr);
-
       //also find all prime numbers less than input value
       var primeStr = returnPrimes(parseInt(inputStr));
       $("#outputPrime").html("<h4>All prime numbers up to your input: </h4>" + primeStr);
+    } else if (/B/.test(outputStr)) {
+      $("#output").html(outputStr);
+      $("#outputPrime").html("");
     } else { //if divisible by three, add HAL effects and conversation
       $(".formSection").hide();
       $(".hal").html("<img src='img/hal.png'>");

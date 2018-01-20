@@ -25,7 +25,7 @@ As an added feature I implemented a function written earlier this week which ret
 
 ## Setup/Installation Requirements
 
-* access this site <a href="wh0pper.github.io/hal18000">here</a>
+* access this site <a href="https://wh0pper.github.io/hal18000">here</a>
 
 
 ## Support and contact details
