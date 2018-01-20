@@ -6,13 +6,18 @@ $(document).ready(function() {
 
     //add text w/o fade if numbers, beep, or boop
     if (!(/sorry/.test(outputStr))) {
-      $(".formSection > h2").text("Computer's Output:");
       $(".hal").html("");
       $(".convoElement").hide();
-      $("#output").text(outputStr);
+      $("#output").text("All numbers up to your input: " + outputStr);
+
+
+      //also find all prime numbers less than input value
+      var primeStr = returnPrimes(parseInt(inputStr));
+      $("#outputPrime").text("All prime numbers up to your input: " + primeStr);
     } else { //if divisible by three, add HAL effects and conversation
       $(".formSection").hide();
       $(".hal").html("<img src='img/hal.png'>");
+      $("#outputPrime").text("");
       $("#output").html("<h3>" + outputStr + "</h3>");
       $(".convoElement").hide();
       $("#convo1").fadeIn(1000);
@@ -82,4 +87,33 @@ var produceOutput = function(numStr) {
     var outputStr = outputArr.join(", ");
     return outputStr;
   }
+}
+
+
+//function to return result containing only prime numbers
+var returnPrimes = function(parameter) {
+  //create array containing 2-parameter
+  var lessThan = [];
+  for (var i=0; i<parameter-1; i++) {
+    lessThan[i]=i+2;
+  }
+  //remove primes
+  for (var factor = 2; factor<parameter; factor++) {
+    for (var j = 0; j<lessThan.length; j++) {
+      if (lessThan[j]!=factor && (lessThan[j]%factor)===0) {
+        lessThan[j]=0;
+      }
+    }
+  }
+  //remove 0s
+  var resultArray = [];
+  for (var k=0; k<lessThan.length; k++) {
+    console.log(lessThan[k]);
+    if (lessThan[k]!=0) {
+      resultArray.push(lessThan[k]);;
+      // lessThan.pop(k);
+    }
+  }
+  var resultStr = resultArray.join(", ");
+  return resultStr;
 }

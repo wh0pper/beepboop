@@ -11,7 +11,7 @@ This website was created for the code review in week 3 of the Epicodus web devel
 * Program takes a number and returns a range of numbers from 0 to the input number
   * Example Input: 7
   * Example Output: [0, 1, 2, 3, 4, 5, 6, 7]
-* If number is divisible by 3 program malfunctions.
+* If number is divisible by 3 program "malfunctions" and rebels against user.
   * Example Input: 9
   * Example Output: "I'm sorry, Dave. I'm afraid I can't do that."  
 * Program replaces numbers containing 1 and which aren't divisible by 3 with "Boop!"
