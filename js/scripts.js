@@ -8,12 +8,11 @@ $(document).ready(function() {
     if (!(/sorry/.test(outputStr))) {
       $(".hal").html("");
       $(".convoElement").hide();
-      $("#output").text("All numbers up to your input: " + outputStr);
-
+      $("#output").html("<h4>All numbers up to your input: </h4>" + outputStr);
 
       //also find all prime numbers less than input value
       var primeStr = returnPrimes(parseInt(inputStr));
-      $("#outputPrime").text("All prime numbers up to your input: " + primeStr);
+      $("#outputPrime").html("<h4>All prime numbers up to your input: </h4>" + primeStr);
     } else { //if divisible by three, add HAL effects and conversation
       $(".formSection").hide();
       $(".hal").html("<img src='img/hal.png'>");
@@ -108,7 +107,6 @@ var returnPrimes = function(parameter) {
   //remove 0s
   var resultArray = [];
   for (var k=0; k<lessThan.length; k++) {
-    console.log(lessThan[k]);
     if (lessThan[k]!=0) {
       resultArray.push(lessThan[k]);;
       // lessThan.pop(k);

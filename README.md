@@ -7,8 +7,10 @@ epicodus wk 3 code review - page that manipulates input number and displays resu
 
 This website was created for the code review in week 3 of the Epicodus web development program. It takes a user input number and displays different results based on certain conditions being met. Some of the outputs and styling take inspiration from the HAL 9000 computer in 2001: A Space Odyssey.
 
+As an added feature I implemented a function written earlier this week which returns all prime numbers less than a given number.
+
 ## Specifications
-* Program takes a number and returns a range of numbers from 0 to the input number
+* Program takes a number and returns a range of numbers from 0 to the input number as well as all prime numbers within that range
   * Example Input: 7
   * Example Output: [0, 1, 2, 3, 4, 5, 6, 7]
 * If number is divisible by 3 program "malfunctions" and rebels against user.
@@ -33,6 +35,8 @@ contact the author at jaredclemmensen@gmail.com
 ## Technologies Used
 
 This site is built using HTML and CSS, with the Bootstrap framework for styling. jQuery is used to build the interface functionality and javascript is used for the logic that determines page outputs.
+
+The HAL image is animated using a combination of CSS transformation and Javascript mouse tracking.
 
 ### License
 
